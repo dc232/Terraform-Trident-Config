@@ -1,0 +1,21 @@
+apiVersion: trident.netapp.io/v1
+kind: TridentBackendConfig
+metadata:
+  name: ${metadataname}
+  namespace: ${namespace}
+spec:
+  version: 1
+  storageDriverName: ${storagedrivername}
+  subscriptionID: ${subscriptionid}
+  tenantID: ${tenantid}
+  location: ${location}
+  serviceLevel: ${servicelevel}
+  virtualNetwork: ${virtualNetwork}
+  subnet: ${subnet}
+  backendName: ${backendName}
+  limitVolumeSize: ${volumesizelimit}
+  defaults: 
+    exportRule: 0.0.0.0/0
+    size: ${defaultvolumesize}
+  credentials:
+    name: ${secretcredentails}
