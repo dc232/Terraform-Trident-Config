@@ -25,9 +25,6 @@ data "template_file" "crds" {
 }
 
 resource "kubectl_manifest" "deploy_trident_orchestrator_crd" {
-  depends_on = [
-    
-  ]
     yaml_body = data.http.crds.response_body
 }
 
