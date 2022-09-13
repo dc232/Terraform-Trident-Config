@@ -20,7 +20,7 @@ resource "kubernetes_namespace" "netapp" {
   }
 }
 
-data "template_file" "crds" {
+data "http" "crds" {
   url = "https://raw.githubusercontent.com/NetApp/trident/master/helm/trident-operator/crds/tridentorchestrators.yaml"
 }
 
