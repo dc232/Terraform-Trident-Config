@@ -13,6 +13,6 @@ resource "kubernetes_storage_class_v1" "example" {
   allow_volume_expansion = var.allow_volume_exspansion
   parameters = {
     backendType = "azure-netapp-files"
-    fsType: "nfs"
+    csi.storage.k8s.io/fstype = "nfs"
   }
 }
